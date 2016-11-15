@@ -1,0 +1,482 @@
+
+<!--
+`bbva-header`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="bbva-header">
+  <template>
+    <style>
+      :host {
+        display: block;
+       
+      }
+      /* Header */
+  header.container-fluid {
+  background-color: #072146;
+  color: #fff;
+  font-family: "Roboto","BentonSansBBVA Medium", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  padding: 0; }
+    header.container-fluid nav.navbar {
+    border-width: 0;
+    margin-bottom: 0; }
+      header.container-fluid nav.navbar .navbar-header {
+      float: none;
+      padding-top: 6em; }
+    header.container-fluid .container {
+    padding: 0 15px;
+    position: relative; }
+    header.container-fluid a {
+    color: #fff;
+    border-bottom: none; }
+      header.container-fluid a:hover {
+      color: #5bbeff;
+      border-bottom: none; }
+    header.container-fluid #logo,   header.container-fluid #logo-mobile {
+    display: inline-block; }
+      header.container-fluid #logo img,   header.container-fluid #logo-mobile img {
+      height: 30px;
+      width: 223px; }
+    header.container-fluid ul {
+    display: flex;
+    font-family: "BentonSansBBVA Medium", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative; }
+      header.container-fluid ul li {
+      padding-left: 2.5em;
+      position: relative; }
+        header.container-fluid ul li:before {
+        content: '';
+        margin: 0;
+        padding: 0; }
+        header.container-fluid ul li:first-child {
+        margin-left: 0;
+        padding-left: 0; }
+        header.container-fluid ul li.active a {
+        color: #fff; }
+    header.container-fluid .top-nav {
+    font-size: 1.3rem; }
+      header.container-fluid .top-nav ul {
+      justify-content: flex-end;
+      position: absolute;
+      right: 15px;
+      top: -5.75em;
+      width: 100%; }
+        header.container-fluid .top-nav ul li {
+        padding-left: 1em; }
+          header.container-fluid .top-nav ul li a {
+          color: #bdbdbd;
+          font-family: "BentonSansBBVA Medium", "Helvetica Neue", Arial, Helvetica, sans-serif;
+          transition: color 100ms linear 0s; }
+            header.container-fluid .top-nav ul li a:hover {
+            color: #fff; }
+    header.container-fluid .main-nav ul {
+    font-size: 1.4rem;
+    display: table;
+    margin: -26px 0 0 295px;
+    padding-bottom: 1.875em; }
+      header.container-fluid .main-nav ul li {
+      display: table-cell;
+      padding-bottom: 0;
+      text-transform: uppercase; }
+        header.container-fluid .main-nav ul li.active a {
+        color: #fff; }
+          header.container-fluid .main-nav ul li.active a:hover,   header.container-fluid .main-nav ul li.active a:active,   header.container-fluid .main-nav ul li.active a:focus {
+          color: #fff; }
+        header.container-fluid .main-nav ul li a {
+        color: #bdbdbd; }
+          header.container-fluid .main-nav ul li a:hover,   header.container-fluid .main-nav ul li a:active,   header.container-fluid .main-nav ul li a:focus {
+          color: #5bbeff; }
+    header.container-fluid .main-nav ul:last-child {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 15px;
+    top: 3px; }
+      header.container-fluid .main-nav ul:last-child li {
+      text-transform: none; }
+        header.container-fluid .main-nav ul:last-child li.sign-in {
+        padding-right: 0.75em; }
+          header.container-fluid .main-nav ul:last-child li.sign-in a {
+          color: #f8cd51; }
+            header.container-fluid .main-nav ul:last-child li.sign-in a:hover {
+            color: #fff; }
+        header.container-fluid .main-nav ul:last-child li.apply {
+        padding-left: 0.75em; }
+          header.container-fluid .main-nav ul:last-child li.apply a {
+          color: #fff; }
+            header.container-fluid .main-nav ul:last-child li.apply a:hover,   header.container-fluid .main-nav ul:last-child li.apply a:active,   header.container-fluid .main-nav ul:last-child li.apply a:focus {
+            color: #5bbeff; }
+    header.container-fluid .secondary-nav {
+    background-color: #004481;
+    height: 72px; }
+      header.container-fluid .secondary-nav ul {
+      font-family: "BentonSansBBVA Medium", "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 1.4rem;
+      padding: 1.85em 0;
+      z-index: 1; }
+        header.container-fluid .secondary-nav ul li {
+        padding-bottom: 0; }
+          header.container-fluid .secondary-nav ul li a {
+          color: #fff; }
+            header.container-fluid .secondary-nav ul li a .bbva-coronita_return {
+            color: #5bbeff; }
+            header.container-fluid .secondary-nav ul li a:hover {
+            color: #5bbeff; }
+          header.container-fluid .secondary-nav ul li.active a {
+          color: #bdbdbd; }
+          header.container-fluid .secondary-nav ul li.search-wrapper {
+          display: block;
+          position: absolute;
+          right: 0; }
+            header.container-fluid .secondary-nav ul li.search-wrapper .search-trigger {
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.15em;
+            padding: 1em 0 1em 1em;
+            transition: color 100ms linear 0s; }
+              header.container-fluid .secondary-nav ul li.search-wrapper .search-trigger:hover {
+              color: #5bbeff; }
+      header.container-fluid .secondary-nav .form-wrapper {
+      background-color: #004481;
+      display: none;
+      margin: 0 15px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0;
+      z-index: 2; }
+        header.container-fluid .secondary-nav .form-wrapper form {
+        height: 71px;
+        margin: 0 15px 0 0;
+        width: 100%;
+        display: table; }
+          header.container-fluid .secondary-nav .form-wrapper form input[type="text"] {
+          background-color: #004481;
+          border: none;
+          color: #fff;
+          outline: none;
+          padding: 0.25em 0.75em;
+          width: 95%;
+          letter-spacing: 0; }
+            header.container-fluid .secondary-nav .form-wrapper form input[type="text"]::-webkit-input-placeholder {
+            color: #bdbdbd;
+            opacity: 1; }
+            header.container-fluid .secondary-nav .form-wrapper form input[type="text"]:-moz-placeholder {
+            color: #bdbdbd;
+            opacity: 1; }
+            header.container-fluid .secondary-nav .form-wrapper form input[type="text"]::-moz-placeholder {
+            color: #bdbdbd;
+            opacity: 1; }
+            header.container-fluid .secondary-nav .form-wrapper form input[type="text"]:-ms-input-placeholder {
+            color: #bdbdbd;
+            opacity: 1; }
+          header.container-fluid .secondary-nav .form-wrapper form input[type="submit"] {
+          border: none;
+          outline: none;
+          background-color: #004481;
+          background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNOC42LDQuMUM3LjgsMy40LDYuNywzLjUsNi43LDMuNVYxLjloMC4yQzkuMiwyLDExLDMuOCwxMS4xLDYuMUg5LjRDOS40LDYuMSw5LjQsNC45LDguNiw0LjFMOC42LDQuMXogTTExLjksMTAuN2MwLjgtMS4xLDEuMy0yLjUsMS4zLTRjMC0zLjctMy02LjYtNi42LTYuNlMwLDMsMCw2LjZjMCwzLjcsMyw2LjYsNi42LDYuNmMxLjUsMCwyLjktMC41LDQtMS40bDEuMiwxLjJsMi43LDIuN2wwLjIsMC4ybDEuMy0xLjNsLTAuMi0wLjJMMTEuOSwxMC43eiIvPjwvZz48L3N2Zz4=);
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          margin: 2.6rem 0;
+          padding: 0;
+          text-indent: -9999px;
+          width: 18px;
+          height: 18px;
+          position: relative;
+          z-index: 2; }
+
+/* Search Autocomplete (Search&Promote Functionality) */
+.yui-ac-container {
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 #d3d3d3;
+  display: block;
+  margin: 0;
+  position: relative;
+  top: 2px; }
+
+  header.container-fluid .yui-ac-bd ul {
+  display: block;
+  padding: 1.7rem 0; }
+    header.container-fluid .yui-ac-bd ul li {
+    color: #1973b8;
+    cursor: pointer;
+    display: block;
+    padding: 1.05rem 3.6rem;
+    width: 100%; }
+      header.container-fluid .yui-ac-bd ul li:hover {
+      color: #072146; }
+
+.search-close {
+  background-color: #004481;
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  margin: 0;
+  overflow: hidden;
+  padding: 3.55rem 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: color 100ms linear 0s;
+  width: 24px; }
+  .search-close:hover > * {
+    background-color: #fff; }
+
+.search-close-left, .search-close-right {
+  content: '';
+  position: absolute;
+  height: 0.275rem;
+  width: 100%;
+  top: 50%;
+  right: 0;
+  margin-top: -1px;
+  background: #000;
+  background-color: #5bbeff;
+  transition: all 0.2s ease-out; }
+
+.search-close-left {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.search-close-right {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.search-close-left-outro {
+  -webkit-transform: rotate(90deg) scale(0);
+  -moz-transform: rotate(90deg) scale(0);
+  -ms-transform: rotate(90deg) scale(0);
+  -o-transform: rotate(90deg) scale(0);
+  transform: rotate(90deg) scale(0); }
+
+.search-close-right-outro {
+  -webkit-transform: rotate(-90deg) scale(0);
+  -moz-transform: rotate(-90deg) scale(0);
+  -ms-transform: rotate(-90deg) scale(0);
+  -o-transform: rotate(-90deg) scale(0);
+  transform: rotate(-90deg) scale(0); }
+
+.search-close-left-intro {
+  -webkit-transform: rotate(45deg) scale(1);
+  -moz-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  -o-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1); }
+
+.search-close-right-intro {
+  -webkit-transform: rotate(-45deg) scale(1);
+  -moz-transform: rotate(-45deg) scale(1);
+  -ms-transform: rotate(-45deg) scale(1);
+  -o-transform: rotate(-45deg) scale(1);
+  transform: rotate(-45deg) scale(1); }
+    </style>
+    
+<!--**** --
+virtual="../header-global-top.html"
+virtual="../header-nav-personal.html"
+virtual="../header-global-sign-in-top.html"
+virtual="../header-global-sign-in-links.html"
+virtual="../header-global-sign-in-bottom.html"
+
+--> 
+
+<!--header section goes here-->
+<header id="top" class="container-fluid">
+  <nav class="navbar navbar-static-top"> 
+    
+    <!-- Logo and mobile nav -->
+    <div class="navbar-header container"> <a href="#sidr-main" id="responsive-menu-button" class="navbar-toggle icon ico-sn_menu collapsed"> <span class="sr-only">View Menu</span> </a> <a href="/" id="logo-mobile" class="hidden-lg"><img src="../../../img/bbvacompass-white.svg" alt="BBVA Compass"></a> 
+      
+      <!-- Mobile-Only Sign-In Link --> 
+      <a class="sign-in hidden-lg" href="#header-sign-in-mobile" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="header-sign-in-mobile">Sign In</a> </div>
+    
+    <!-- Main Naviation -->
+    <section role="navigation" class="collapse navbar-collapse" id="navigation"> 
+      
+      <!-- Top Nav Links -->
+      <div class="top-nav container">
+        <ul>
+          <li><a href="/locations/">Find a Branch</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/careers/">Careers</a></li>
+        </ul>
+      </div>
+      <!-- /.top-nav --> 
+      
+      <!-- Main Site Sections -->
+      <div class="main-nav container"> <a href="/" id="logo"><img src="../../../img/bbvacompass-white.svg" alt="BBVA Compass"></a>
+        <ul class="primary-nav">
+          <li><a href="/personal/" title="Personal Banking">Personal</a></li>
+          <li><a href="/business/" title="Small Business">Small Business</a></li>
+          <li><a href="/commercial/" title="Commercial Banking">Commercial</a></li>
+          <li><a href="/wealth/" title="Global Wealth">Global Wealth</a></li>
+        </ul>
+        <ul class="sidr-hidden">
+          <li class="sign-in"><a href="#header-sign-in" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="header-sign-in">Log In</a></li>
+          <li class="apply"><a href="/digital-services/apply/">Sign up</a></li>
+        </ul>
+      </div>
+      <!-- /.main-nav --> 
+      
+      <!-- Sign-In for Large Resolutions/Desktop -->
+      <section id="header-sign-in" class="collapse"> 
+        <!-- Desktop-Only Sign-In gets inserted here on >= 1200px --> 
+      </section>
+      <!-- /#sign-in --> 
+      <!-- Secondary Nav --> 
+      <!-- These links will change depending on if you are on Personal, Small Business, Commercial or Global Wealth -->
+      <div class="secondary-nav">
+        <div class="container">
+          <ul>
+            <li><a href="/checking-accounts/">Checking</a></li>
+            <li><a href="/savings/">Savings</a></li>
+            <li><a href="/credit-cards/">Credit Cards</a></li>
+            <li><a href="/loans/">Lending</a></li>
+            <li><a href="/mortgage/">Mortgages</a></li>
+            <li><a href="/specialty-programs/">Specialty Programs</a></li>
+            <li><a href="/digital-services/">Digital Services</a></li>
+            <li><a href="/moneyfit/">Money Fit</a></li>
+            
+            <!-- Search Form Toggle -->
+            <li class="search-wrapper"> <span class="search-trigger icon ico-to_search"></span> </li>
+            <!-- /.search-wrapper -->
+          </ul>
+          
+          <!-- Search Form --> 
+          <!-- This structure comes from the Search Component in AEM -->
+          <div class="form-wrapper"> <span class="search-close"> <span class="search-close-left"></span> <span class="search-close-right"></span> </span>
+            <form method="GET" id="searchform" name="searchform" action="null.html">
+              <input type="text" id="q" name="q" value="" />
+              <input type="submit" value="Search" />
+              <input type="hidden" name="sp_staged" value="1" />
+            </form>
+            <!--/form --> 
+          </div>
+          <!-- .form-wrapper --> 
+          
+        </div>
+        <!-- /.container --> 
+      </div>
+      <!-- /.secondary-nav --> 
+      
+    </section>
+    <!--/.nav-collapse --> 
+  </nav>
+  <!-- /.navbar --> 
+  <!-- Begin Mobile-Only Sign-In -->
+  <section id="header-sign-in-mobile" class="collapse">
+    <div class="sign-in-wrapper">
+      <div class="sign-in-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7 col-md-8"> <a class="sign-in-close visible-xs" href="#" data-toggle="collapse" data-target="#header-sign-in-mobile"><span class="icon icon-sm bbva-coronita_close"></span></a>
+            <div class="sign-in-form">
+              <h2 class="h3">Online Banking Sign in</h2>
+              <form autocomplete="off"  id="olbLoginForm" class="mod" method="post" action="https://optn.bbvacompass.com/emg/login/doLogin">
+                <div class="form-group">
+                  <div id="signon-error-msg">
+                    <noscript>
+                    <p><span class="icon icon-lg bbva-coronita_alert"></span> Enable JavaScript to login</p>
+                    </noscript>
+                  </div>
+                  <div class="username-input">
+                    <input class="inputusername" placeholder="Username" autocomplete="off" type="text" name="UserNameInput" value="" id="userNameInput" maxlength="20">
+                    
+                    <!--<img style="visibility:hidden;" id="loginSpinner" src="/Images/ajax-spinner-8px-grey.gif" />-->
+                    
+                    <input id="submit-olb" class="btn btn-aqua" type="submit" name="signon" value="Sign In"  onClick="return OlbLogin.doLogin()">
+                  </div>
+                </div>
+                <!-- /.form-group -->
+                
+                <input autocomplete="off" type="hidden" name="UserName" value="" id="userName" style="height:25px;"  />
+                <div class="remember-me">
+                  <input type="checkbox" class="css-checkbox" id="remembermeChk"  onclick='OlbRememberMe.onCheckboxClick()'  value="check"/>
+                  <label for="remembermeChk"><span class="faux-box"></span> Remember Me</label>
+                </div>
+                <!-- /.remember-me -->
+                
+              </form>
+            </div>
+            <!-- /.sign-in-form --> 
+          </div>
+          <!-- /.col -->
+          
+          <div class="col-sm-5 col-md-4">
+            <div class="sign-in-links"> <a class="sign-in-close hidden-xs" href="#" data-toggle="collapse" data-target="#header-sign-in"><span class="icon icon-sm bbva-coronita_close"></span></a> <a class="sign-in-close visible-sm visible-md" href="#" data-toggle="collapse" data-target="#header-sign-in-mobile"><span class="icon icon-sm bbva-coronita_close"></span></a>
+              <ul>
+                <li><a href="/online-banking/forgot-password.html">Need Help?</a></li>
+                <li><a href="/banking-services/sign-in/">More Online Services</a></li>
+                <li><a href="/digital-services/view-demos/">View Demo Videos</a></li>
+                <li><a href="/online-banking/activate/">Activate Online Banking</a></li>
+              </ul>
+            </div>
+            <!-- /.sign-in-links --> 
+          </div>
+          <!-- /.col --> 
+        </div>
+        <!-- /.row --> 
+      </div>
+      <!-- /.container --> 
+    </div>
+    <!-- /.sign-in-wrapper --> 
+  </section>
+  <!-- /#sign-in --> 
+  <!-- End Mobile-Only Sign-In --> 
+  
+  <!-- Begin Maintenance Message --> 
+  <!-- Bootstrap Modal -->
+  <div class="modal fade modal-alert" id="olb-maintenance-msg" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header"> <span class="icon bbva-coronita_alarm-ring white bg-blue-medium"></span> </div>
+        <!-- /.modal-header --> 
+        
+        <!-- The body of the modal can be edited -->
+        <div class="modal-body">
+          <p><strong>Online Banking Maintenance Notice:</strong> Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <!-- /.modal-body -->
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-blue-medium" data-dismiss="modal">Ok</button>
+        </div>
+        <!-- /.modal-footer --> 
+        
+      </div>
+      <!-- /.modal-content --> 
+    </div>
+    <!-- /.modal-dialog --> 
+  </div>
+  <!-- /.modal --> 
+  <!-- End Maintenance Message --> 
+  
+</header>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'bbva-header',
+
+      properties: {
+        
+      },
+
+    });
+  </script>
+</dom-module>
